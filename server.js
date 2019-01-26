@@ -32,7 +32,7 @@ app.post('/hook', (req, res, next) => {
         username: process.env.SHOPIFY_API_KEY || 'efcc1f9f2e74becd1ff3eebcac6d09aa',
         password: process.env.SHOPIFY_SECRET || 'c4fe14341677c580282dd5e39e0e6480'
     }
-   }).then(res => console.log(res));
+   }).then(res => console.log(res.data));
 
   res.status(200).send(`Code created: ${dicsountCode}`);
 });
