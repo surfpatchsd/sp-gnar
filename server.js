@@ -12,19 +12,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // route handler for requests to /data
 app.post('/hook', (req, res, next) => {
-  const webhookUrl = req.params.url;
 
-  console.log(req);
-
-  console.log('req data:::', req.data);
-  console.log('webhookUrl:::', webhookUrl);
+  console.log('stringified merges:::', JSON.stringify(req.body.data.merges));
+  console.log('not stringified merges:::', req.body.data.merges);
 
   res.status(200).send('OK')
 });
 
 // route handler for requests to /data
 app.get('/hook', (req, res, next) => {
-  res.status(200).send('OK')
+  res.status(200).send("Server's up, dude!");
 });
 
 module.exports = app;
