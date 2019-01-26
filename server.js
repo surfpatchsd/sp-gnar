@@ -16,4 +16,9 @@ app.post('/hook', (req, res, next) => {
   res.status(200).send('OK')
 });
 
+// route handler for requests to /data
+app.get('/hook', (req, res, next) => {
+  res.status(200).send('OK')
+});
+
 module.exports = app;
