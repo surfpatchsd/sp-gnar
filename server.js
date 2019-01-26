@@ -13,7 +13,7 @@ app.post('/hook', (req, res, next) => {
 
   // Get data from new mailchimp subscriber and create the discoutn code string
   const firstName = req.body.data.merges.FNAME;
-  const lastName = req.body.data.merges.FNAME;
+  const lastName = req.body.data.merges.LNAME;
   const dicsountCode = `RAD_REP_${firstName.trim().replace(/\s/g, '')}_${lastName.trim().replace(/\s/g, '')}`;
 
   // price rule id can be changed to offer different discount
